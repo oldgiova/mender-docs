@@ -1,5 +1,5 @@
 ---
-title: Mender Server
+title: mtls ambassador
 taxonomy:
     category: docs
     label: tutorial
@@ -143,11 +143,13 @@ kubectl apply -f mender-mtls-deployment.yml
 ```
 
 ## Expose the mTLS service
+
 You can expose the Mender mTLS Ambassador service with a L4 Load balancer. Please
 refer to your cloud provider documentation for a complete overview.
 Here you can have sample setups, that could be different for your specific use case:
 
 * AWS sample setup:
+
 ```bash
 cat >mender-mtls-service.yml <<EOF
 apiVersion: v1
@@ -175,6 +177,7 @@ kubectl apply -f mender-mtls-service.yml
 ```
 
 * Azure sample setup:
+
 ```bash
 cat >mender-mtls-service.yml <<EOF
 apiVersion: v1
