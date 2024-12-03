@@ -315,7 +315,7 @@ You can now install the Mender Server.
 
 [ui-tabs position="top-left" active="0" theme="default" ]
 [ui-tab title="Open Source"]
-<!--AUTOVERSION: "export MENDER_VERSION_TAG=\"mender-%\""/integration "cat >mender-%.yml <<EOF"/integration "helm upgrade --install mender mender/mender -f mender-%.yml"/integration -->
+<!--AUTOVERSION: "export MENDER_VERSION_TAG=\"mender-%\""/integration "cat >mender-%.yml <<EOF"/integration "helm upgrade --install mender mender/mender --version % -f mender-%.yml"/integration -->
 ```bash
 export MENDER_SERVER_DOMAIN="mender.example.com"
 export MENDER_SERVER_URL="https://${MENDER_SERVER_DOMAIN}"
@@ -344,7 +344,7 @@ EOF
 Finally, install the Mender Server:
 
 ```bash
-helm upgrade --install mender mender/mender -f mender-values.yml
+helm upgrade --install mender mender/mender --version 5.11.2 -f mender-values.yml
 ```
 [/ui-tab]
 [ui-tab title="Enterprise"]
@@ -389,7 +389,7 @@ kubectl create secret generic mender-mongo \
 
 Now you can configure the Mender Server:
 
-<!--AUTOVERSION: "export MENDER_VERSION_TAG=\"mender-%\""/integration "cat >mender-%.yml <<EOF"/integration "helm upgrade --install mender mender/mender -f mender-%.yml"/integration -->
+<!--AUTOVERSION: "export MENDER_VERSION_TAG=\"mender-%\""/integration "cat >mender-%.yml <<EOF"/integration "helm upgrade --install mender mender/mender --version % -f mender-%.yml"/integration -->
 ```bash
 export MENDER_SERVER_DOMAIN="mender.example.com"
 export MENDER_SERVER_URL="https://${MENDER_SERVER_DOMAIN}"
@@ -469,7 +469,7 @@ EOF
 Finally, install the Mender Server:
 
 ```bash
-helm upgrade --install mender mender/mender -f mender-values.yml
+helm upgrade --install mender mender/mender --version 5.11.2 -f mender-values.yml
 ```
 [/ui-tab]
 [/ui-tabs]
